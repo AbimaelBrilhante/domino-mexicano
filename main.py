@@ -20,11 +20,11 @@ class domino_mexicano:
                 pontos = input(f"Digite a pontuação de {self.lista[self.n-1]}: ")
                 self.pontuacao_jogador.append({self.lista[self.n-1]:pontos})
                 self.n -= 1
-            self.n=2
+            self.n = self.numero_participantes
 
 
 
-        #print(self.pontuacao_jogador)
+        print(self.pontuacao_jogador)
 
 
 
