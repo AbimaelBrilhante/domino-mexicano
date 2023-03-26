@@ -30,4 +30,5 @@ class domino_mexicano:
 
 jogatina = domino_mexicano()
 jogatina.pontuacao_carrocao()
+##
 
