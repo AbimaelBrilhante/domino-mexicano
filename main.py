@@ -2,7 +2,7 @@ class domino_mexicano:
 
     def __init__(self):
         #self.carrocao = [[],[],[],[],[],[],[],[],[],[],[],[],[]] #dado_original - uma lista para cada numero de carrocao dentro de outra lista
-        self.carrocao = [[],[],[]]  #dado_teste
+        self.carrocao = [[],[],[],[],[],[]]  #dado_teste
         self.numero_participantes_original = int(input("Digite o número de jogadores: "))
         self.numero_participantes = self.numero_participantes_original #retorno ao valor do input original (utilizado após a alteração da variavel)
         self.n=0  #outra variavel para a quantidade de participantes
@@ -11,7 +11,8 @@ class domino_mexicano:
             nome_participante = input("Digite o nome do jogador: ")
             self.lista.append(nome_participante)
             self.n += 1
-        #self.lista.reverse()
+        self.lista
+        #print(self.lista)
 
  
     
@@ -20,7 +21,7 @@ class domino_mexicano:
 #faz um loop com a quantidade de carroção do dominó (fazer validação para 13 e não permitir repetidos)
 
     def pontuacao_carrocao(self):
-        qtd_carrocao = 3 #quanidade de carrocoes do jogo = 13
+        qtd_carrocao = 6 #quanidade de carrocoes do jogo = 13
         while qtd_carrocao >= 1: #numero final apos todas as iteracoes
             numero_carrocao = int(input("Digite numero do carrocao: "))
 
@@ -40,6 +41,6 @@ class domino_mexicano:
 
 
 jogatina = domino_mexicano()
-jogatina.pontuacao_carrocao()
+#jogatina.pontuacao_carrocao()
 ###
 

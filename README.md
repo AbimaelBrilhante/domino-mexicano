@@ -5,3 +5,4 @@ em desenvolvimento
 >não permitir repetição de carroção
 >verificar qual forma será o output dos dados
 >transcrever o codigo para javascript com HTML5 e CSS3
+>fazer o try/except para validação do input
