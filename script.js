@@ -1,3 +1,5 @@
+
+
 var carrocao = [[],[],[],[],[],[]] 
 var numero_participantes_original = 2 //alterar para input do HTML
 var numero_participantes = numero_participantes_original 
@@ -7,12 +9,8 @@ while (n <= numero_participantes_original-1){
             var nome_participante = prompt("Digite o nome do Participante: ");
             lista.push(nome_participante)
             n += 1
-        }   
-//console.log(lista) 
+        }    
    
-
-
-
 
 function pontuacao_carrocao(){
     var qtd_carrocao = 2 //quanidade de carrocoes do jogo = 13

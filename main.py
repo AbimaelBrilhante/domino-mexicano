@@ -14,9 +14,6 @@ class domino_mexicano:
         self.lista
         #print(self.lista)
 
- 
-    
-        
         
 #faz um loop com a quantidade de carroção do dominó (fazer validação para 13 e não permitir repetidos)
 
