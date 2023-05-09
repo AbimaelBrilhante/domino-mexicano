@@ -1,4 +1,8 @@
 
+var el = carrocao
+function Mudarestado(el) {
+    document.getElementById(el).style.display = 'block';
+}
 
 var carrocao = [[],[],[],[],[],[]] 
 var numero_participantes_original = 2 //alterar para input do HTML
@@ -34,6 +38,7 @@ function pontuacao_carrocao(){
 }  
 
 pontuacao_carrocao() 
+teste()
 
 console.log(lista)
 console.log(carrocao)
