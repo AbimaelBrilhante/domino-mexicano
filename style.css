@@ -1,4 +1,9 @@
 #carrocao{
-    background-color: white;
-
+    display:none;
+}
+#resultado{
+    display:none;
+}
+#jogatina{
+    display:none;
 }

@@ -1,33 +1,40 @@
 //document.getElementById('carrocao').style.display = "block";
 
 /*var carrocao = [[],[],[],[],[],[]] 
-var numero_participantes_original = 2 //alterar para input do HTML
-var numero_participantes = numero_participantes_original 
-var  n = 0  
-lista = [] 
-while (n <= numero_participantes_original-1){ 
-            //var nome_participante = prompt("Digite o nome do Participante: ");
-            lista.push(nome_participante)
-            n += 1
-        }    
-
 */
+n = 0 
 lista = []
 function nome_participante(){
-    lista = []
     nome_participante = (document.getElementById('nome_participante'))
     lista.push(nome_participante.value)
+    numero_participantes_original = lista.length //alterar para input do HTML
+    numero_participantes = numero_participantes_original 
     console.log(lista)
+    console.log(numero_participantes)
 }
 
+
 function tela_cadastro(){
-    document.getElementById('cadastrar_while').onClick = nome_participante;
-}  
+    document.getElementById('cadastrar_while').onclick = nome_participante;
+} 
 
+function submit_1(){
+    document.getElementById('cadastrar').onclick = none_primeira_tela;
+}
 
+function none_primeira_tela(){
+    document.getElementById('cadastro').style.display = "none";
+    document.getElementById('carrocao').style.display = "block"    
+}
+
+function numero_carrocao(){
+    qtd_carrocao = 13 //quanidade de carrocoes do jogo = 13
+    numero_carrocao = (document.getElementById('numero_carrocao'))
+
+}
 
 function pontuacao_carrocao(){
-    var qtd_carrocao = 2 //quanidade de carrocoes do jogo = 13
+    var qtd_carrocao = 13 //quanidade de carrocoes do jogo = 13
     while (qtd_carrocao >= 1){ 
     //numero_carrocao = prompt("Digite o numero do Carroção: ")
     Number(numero_carrocao)
@@ -46,8 +53,6 @@ function pontuacao_carrocao(){
         
     }
 }  
-//nome_participante()
 
-
-//console.log(lista)
-//console.log(carrocao)
+tela_cadastro()
+submit_1()
