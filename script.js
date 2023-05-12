@@ -10,60 +10,61 @@ function nome_participante(){
 
 function tela_cadastro(){
     document.getElementById('cadastrar_while').onclick = nome_participante;
+    console.log(nome_participante.numero_participantes)
+    console.log(nome_participante.numero_participantes_original)
 } 
 
 function submit_1(){
-    document.getElementById('cadastrar').onclick = none_primeira_tela;
-    numero_carrocao()
-}
-
-function none_primeira_tela(){
-    document.getElementById('cadastro').style.display = "none";
-    document.getElementById('carrocao').style.display = "block"    
+    document.getElementById('cadastrar').onclick = numero_carrocao;
 }
 
 function numero_carrocao(){
+    document.getElementById('cadastro').style.display = "none";
+    document.getElementById('carrocao').style.display = "block"   
+    document.getElementById('jogatina').style.display = "none"
     
     carrocao_repetido = []
-    qtd_carrocao = 13 //quanidade de carrocoes do jogo = 13
     numero_carrocao_digitado = (document.getElementById('numero_carrocao'))
     carrocao_repetido.push(numero_carrocao_digitado.value) 
-    console.log(numero_carrocao_digitado.value)   
-    if(carrocao_repetido.indexOf(numero_carrocao_digitado.value)==-1)
-        alert('Carroção já foi utilizado')
-    else{
-        console.log('segue')
-    } 
     document.getElementById('submit_numero_carrocao').onclick = pontuacao_carrocao 
-    numero_participantes_original = nome_participante.numero_participantes
+     
+   
+/*    if(carrocao_repetido.indexOf(numero_carrocao_digitado.value)==-1){
+        document.getElementById('submit_numero_carrocao').onclick = pontuacao_carrocao 
+        numero_participantes_original = nome_participante.numero_participantes
+    }    
+    else{
+        //alert('Carroção já foi utilizado')
+        document.getElementById('submit_numero_carrocao').onclick = pontuacao_carrocao 
+        numero_participantes_original = nome_participante.numero_participantes
+    } 
+*/
      
 }
 
 carrocao = [[],[],[],[],[],[]] 
 function pontuacao_carrocao(){
-    document.getElementById('jogatina').style.display = "block";
-    document.getElementById('carrocao').style.display = "none"  
-    document.getElementById('cadastrar_pontos_do_carrocao_jogador').onclick = pontuacao_jogador 
-    pontos = document.getElementById('pontuacao_carrocao_jogador')
-       
+
+    document.getElementById('jogatina').style.display = "block"
+    document.getElementById('carrocao').style.display = "none" 
+    console.log(numero_participantes_original) 
+    n=2
+    while (numero_participantes_original>0){
+        pontos = document.getElementById('pontuacao_carrocao_jogador')
+        carrocao[numero_carrocao_digitado.value].push(pontos.value)
+        document.getElementById('cadastrar_pontos_do_carrocao_jogador').onclick = pontuacao_jogador 
+
+    }
+    numero_carrocao    
+    //numero_participantes_original = nome_participante.numero_participantes
+
 
 
 }  
 // EDITAR - ESTÁ SENDO SOLICITADO UM DADO A MAIS
 function pontuacao_jogador(){
-    if(numero_participantes_original<=0){
-        document.getElementById('jogatina').style.display = "none";
-        document.getElementById('carrocao').style.display = "block"  
-        numero_carrocao
-        //numero_participantes_original = numero_participantes
-
-    }
-    else{  
-        carrocao[numero_carrocao_digitado.value].push(pontos.value)
-        console.log(carrocao)
-        numero_participantes_original-=1 
-        pontuacao_carrocao()
-    }             
+    numero_participantes_original-=1   
+    pontuacao_carrocao  
 }
 
 tela_cadastro()
